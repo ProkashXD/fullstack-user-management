@@ -13,7 +13,8 @@ function App() {
   const [success, setSuccess] = useState("");
   const [submitting, setSubmitting] = useState(false);
   const [deletingId, setDeletingId] = useState(null);
-  const API_URL = "http://localhost:3000/api/users";
+  const API_URL =
+  import.meta.env.VITE_API_URL || "http://localhost:3000/api/users";
 
   const filteredUsers = users.filter((user) =>
     user.name.toLowerCase().includes(search.toLowerCase()) || 
